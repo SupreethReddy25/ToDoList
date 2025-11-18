@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  gap: 60px;
+  background: linear-gradient(135deg, #98c1ff, #d1e3ff);
+  min-height: 100vh;
+}
+
+
+#project-list, #todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+}
+
+.project-item {
+  padding: 12px;
+  margin-bottom: 6px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.project-item:hover {
+  background: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+.project-item.active {
+  background: rgba(0, 115, 255, 0.5);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+
+.project-item button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.todo-item {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 12px;
+  margin-bottom: 6px;
+  transition: 0.2s;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.todo-item:hover {
+  background: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+.todo-item span{
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.todo-item input[type="text"] {
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.55);
+  font-size: 16px;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+.todo-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+  color: #004cff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+button:hover {
+  background: rgba(255,255,255,0.6);
+  transform: translateY(-1px);
+}
+
+#add-project, #add-todo {
+  margin-top: 10px;
+}
+
+
+.glass-panel {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.4);
+}
